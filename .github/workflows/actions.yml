@@ -13,3 +13,5 @@ jobs:
           who-to-greet: Selva
       - name: Log greeting time
         run: echo "${{steps.greet.outputs.time}}"
+      - name: Set output
+        run: echo "{time}={{steps.greet.outputs.time}}" >> $GITHUB_OUTPUT
